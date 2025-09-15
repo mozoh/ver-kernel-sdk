@@ -11,31 +11,19 @@ namespace com.anotherworld.kernel {
     public static class AssetBundlesUtils {
         [MenuItem("Kernel/AssetBundles/Build")]
         private static void BuildAddressablesForAllPlatforms() {
-            var buildTargets = new[] {
-                BuildTarget.StandaloneWindows64,
-                BuildTarget.Android
-            };
+            var settings = AddressableAssetSettingsDefaultObject.Settings;
 
-            foreach (var target in buildTargets)
-                if (EditorUserBuildSettings.SwitchActiveBuildTarget(BuildPipeline.GetBuildTargetGroup(target), target)) {
-                    var settings = AddressableAssetSettingsDefaultObject.Settings;
+            if (settings == null) {
+                Debug.LogError("AddressableAssetSettings not found. Make sure Addressables are set up in your project.");
+            return;
+            }
 
-                    if (settings == null) {
-                        Debug.LogError("AddressableAssetSettings not found. Make sure Addressables are set up in your project.");
-                        return;
-                    }
+            AddressableAssetSettings.CleanPlayerContent();
+            AddressableAssetSettings.BuildPlayerContent();
 
-                    AddressableAssetSettings.CleanPlayerContent();
-                    AddressableAssetSettings.BuildPlayerContent();
-
-                    var sourcePath = $"Library/com.unity.addressables/aa/{(target == BuildTarget.Android ? "Android" : "Windows")}/catalog.json";
-                    var destinationPath = $"Build/AssetBundles/{target}/catalog.json";
-                    File.Copy(sourcePath, destinationPath, true);
-                }
-                else {
-                    Debug.LogError($"Could not switch to platform {target}");
-                    break;
-                }
+            var sourcePath = $"Library/com.unity.addressables/aa/{(EditorUserBuildSettings.activeBuildTarget == BuildTarget.Android ? "Android" : "Windows")}/catalog.json";
+            var destinationPath = $"Build/AssetBundles/{EditorUserBuildSettings.activeBuildTarget}/catalog.json";
+            File.Copy(sourcePath, destinationPath, true);
         }
 
         [MenuItem("Kernel/AssetBundles/Deploy Windows")]

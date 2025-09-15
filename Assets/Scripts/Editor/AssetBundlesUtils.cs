@@ -16,15 +16,15 @@ namespace com.anotherworld.kernel {
                 BuildTarget.Android
             };
 
-            var settings = AddressableAssetSettingsDefaultObject.Settings;
-
-            if (settings == null) {
-                Debug.LogError("AddressableAssetSettings not found. Make sure Addressables are set up in your project.");
-                return;
-            }
-
             foreach (var target in buildTargets)
                 if (EditorUserBuildSettings.SwitchActiveBuildTarget(BuildPipeline.GetBuildTargetGroup(target), target)) {
+                    var settings = AddressableAssetSettingsDefaultObject.Settings;
+
+                    if (settings == null) {
+                        Debug.LogError("AddressableAssetSettings not found. Make sure Addressables are set up in your project.");
+                        return;
+                    }
+
                     AddressableAssetSettings.BuildPlayerContent();
 
                     var sourcePath = $"Library/com.unity.addressables/aa/{(target == BuildTarget.Android ? "Android" : "Windows")}/catalog.json";

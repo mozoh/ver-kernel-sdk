@@ -15,7 +15,7 @@ namespace com.anotherworld.kernel {
 
             if (settings == null) {
                 Debug.LogError("AddressableAssetSettings not found. Make sure Addressables are set up in your project.");
-            return;
+                return;
             }
 
             AddressableAssetSettings.CleanPlayerContent();

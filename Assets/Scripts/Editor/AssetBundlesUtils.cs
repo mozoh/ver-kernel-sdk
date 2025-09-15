@@ -25,6 +25,7 @@ namespace com.anotherworld.kernel {
                         return;
                     }
 
+                    AddressableAssetSettings.CleanPlayerContent();
                     AddressableAssetSettings.BuildPlayerContent();
 
                     var sourcePath = $"Library/com.unity.addressables/aa/{(target == BuildTarget.Android ? "Android" : "Windows")}/catalog.json";

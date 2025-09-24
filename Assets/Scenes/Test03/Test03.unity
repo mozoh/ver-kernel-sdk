@@ -789,8 +789,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 377445528}
+  - component: {fileID: 377445529}
   m_Layer: 0
-  m_Name: '[Elevator] {"Platform":"ElevatorPlatform","Width":2,"Height":3,"Length":1,"MoveButton":"TestMoveButton","Floors":[{"Transform":"A1","CallButton":"CallButtonA1"},{"Transform":"A2","CallButton":"CallButtonA2"}]}'
+  m_Name: '[Elevator]'
   m_TagString: Untagged
   m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -815,6 +816,19 @@ Transform:
   - {fileID: 967911881}
   m_Father: {fileID: 990019819}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &377445529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377445527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e82986acb57bbe42aec2fd0f22a74a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Json: {fileID: 4900000, guid: 0f3193765c63032469725dcda381d28f, type: 3}
 --- !u!1 &596702032
 GameObject:
   m_ObjectHideFlags: 0
@@ -1404,8 +1418,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1262069030}
+  - component: {fileID: 1262069031}
   m_Layer: 0
-  m_Name: '[Dimension] {"Width":7,"Height":3,"Length":5,"SurveillanceName":"Dim 3"}'
+  m_Name: '[Dimension]'
   m_TagString: Untagged
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1426,6 +1441,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1053195646}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1262069031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262069029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e82986acb57bbe42aec2fd0f22a74a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Json: {fileID: 4900000, guid: cbc6d552c18819e4294e3a3bfc433326, type: 3}
 --- !u!1 &1272090908
 GameObject:
   m_ObjectHideFlags: 0
@@ -1573,8 +1601,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1348725236}
+  - component: {fileID: 1348725237}
   m_Layer: 0
-  m_Name: '[Dimension] {"Width":7,"Height":3,"Length":5,"SurveillanceName":"Dim 2"}'
+  m_Name: '[Dimension]'
   m_TagString: Untagged
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1595,6 +1624,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1222300495}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1348725237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348725235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e82986acb57bbe42aec2fd0f22a74a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Json: {fileID: 4900000, guid: 3966c3db1f5a8cf40a41d98807651da5, type: 3}
 --- !u!1 &1349302971
 GameObject:
   m_ObjectHideFlags: 0
@@ -1769,8 +1811,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1758918688}
+  - component: {fileID: 1758918689}
   m_Layer: 0
-  m_Name: '[Dimension] {"Width":7,"Height":3,"Length":5,"SurveillanceName":"Dim 1"}'
+  m_Name: '[Dimension]'
   m_TagString: Untagged
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1791,6 +1834,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 990019819}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1758918689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758918687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e82986acb57bbe42aec2fd0f22a74a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Json: {fileID: 4900000, guid: 438ad4b679f50ad47bfaca20aac4881b, type: 3}
 --- !u!1 &2062391153
 GameObject:
   m_ObjectHideFlags: 0

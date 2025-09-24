@@ -1,0 +1,17 @@
+{
+  "Platform": "ElevatorPlatform",
+  "Width": 2,
+  "Height": 3,
+  "Length": 1,
+  "MoveButton": "TestMoveButton",
+  "Floors": [
+    {
+      "Transform": "A1",
+      "CallButton": "CallButtonA1"
+    },
+    {
+      "Transform": "A2",
+      "CallButton": "CallButtonA2"
+    }
+  ]
+}
